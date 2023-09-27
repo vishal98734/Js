@@ -21,7 +21,8 @@ console.log(Id === anotherId);
 
 const heros = ["shaktiman", "naagraj", "doga"]
  let myObj = {
-    name: "vishal"
+    name: "vishal",
+    age: 22,
 }
 
 const myFunction = function(){
@@ -29,3 +30,28 @@ const myFunction = function(){
 }
 
 console.log(typeof outsideTemp);
+  
+
+//*********************************************************
+
+// Stack (Primitve), Heap (Non-Primitive)
+
+let myName = "vishal"
+
+let anothername = myName
+anothername = "akki"
+
+console.log(myName);
+console.log(anothername);
+
+let userOne = {
+    email: "user@google.com",
+    upi: "user@ybl"
+}
+
+let userTwo = userOne
+
+userTwo.email = "akki@blinkit.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
