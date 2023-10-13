@@ -42,7 +42,14 @@ const bal = 1000
 
 const UserloggedIn = true
 const debitCard = true
+const loggedInGoogle = false
+const loggedInEmail = false
 
 if (UserloggedIn && debitCard && 2==3 ) {
    console.log("allow to buy course");  
 }
+
+if (loggedInGoogle || loggedInEmail){
+   console.log("user logged in");
+}
+
