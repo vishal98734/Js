@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="photoshop"
+                    src="https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt="photoshop"></li>
+            <li><img width="200px" id="japan"
+                    src="https://images.pexels.com/photos/6424589/pexels-photo-6424589.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt=""></li>
+            <li><img width="200px" id="river"
+                    src="https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt=""></li>
+            <li><img width="200px" id="owl"
+                    src="https://images.pexels.com/photos/879109/pexels-photo-879109.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    // document.getElementById("owl").onclick = function () {
+    //     alert("one owl clicked")
+    // }
+
+
+    // attachEvent()
+    //jQuery - on
+
+
+    // type, timestamp, defultPrevented,
+    // target, toElement, srcelement, currentTarget,
+    // clientX clienty, screenX, screenY,
+    // altkey, ctrlkey, shiftkey, keycode
+
+
+    // document.getElementById("images").addEventListener("click", function(e){
+    //     console.log("clicked inside the url");
+    // }, false)
+    // document.getElementById("owl").addEventListener("click", function(e){
+    //     console.log("owl clicked");
+    //     e.stopPropagation()
+    // }, false)
+
+    // document.getElementById('google').addEventListener
+    // ('click', function(e){
+    //     e.preventDefault();
+    //     e.stopPropagation();
+    //     console.log('google');
+    // }, false)
+    
+    // removeIt.parentNode.removeChild(removeIt)
+    document.querySelector('#images').addEventListener
+        ('click', function (e) {
+            console.log(e.target.tagName);
+            if(e.target.tagName === 'IMG'){
+                console.log(e.target.id);
+                let removeIt =  e.target.parentNode
+                 removeIt.remove()
+
+            }
+            }, false)
+            
+</script>
+
+</html>
