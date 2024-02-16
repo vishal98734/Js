@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>title</title>
+</head>
+<button id="green">green</button>
+<button id="Red">Red</button>
+<body>
+    <script>
+        // function init() {
+        //     let name = "Mozilla"; // name is a local variable created by init
+        //     function displayName() {
+        //         // displayName() is the inner function, that forms the closure
+        //         console.log(name); // use variable declared in the parent function
+        //     }
+        //     displayName();
+        // }
+        // init();
+
+    //     function outer(){     
+    //         let username = "akki"
+    //         function inner(){
+    //             console.log("inner",username);
+    //         }
+    //         function innerTwo(){
+    //             console.log("innerTwo",username);
+    //         }
+    //         inner()
+    //         innerTwo()
+
+    //     }
+    //     outer()
+    //    console.log("too outer",username);
+
+           
+    </script>
+<script>
+    // document.getElementById("green").onclick = function(){
+    //     document.body.style.backgroundColor = `orange`
+    // }
+    // document.getElementById("Red").onclick = function(){
+    //     document.body.style.backgroundColor = `red`
+    // }
+
+    function clickHandler(color){
+    //     document.body.style.backgroundColor = `${color}`
+    return function(){
+        document.body.style.backgroundColor = `${color}`
+    }
+    }
+
+    document.getElementById("green").onclick = clickHandler("orange")
+    document.getElementById("Red").onclick = clickHandler("Black")
+</script>
+</body>
+
+</html>
